@@ -11,6 +11,7 @@ import {
   TextField,
   View,
   withAuthenticator,
+  Image
 } from "@aws-amplify/ui-react";
 import { listNotes } from "./graphql/queries";
 import {
@@ -115,7 +116,7 @@ const App = ({ signOut }) => {
             </Text>
             <Text as="span">{note.description}</Text>
             {note.image && (
-            <img
+            <Image
               src={note.image}
               alt={`visual aid for ${notes.name}`}
               style={{ width: 400 }}
